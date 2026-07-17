@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, render_template  # Добавили импорт render_template
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -9,4 +9,5 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'placeholder-for-local-dev')
 
 @app.route('/')
 def index():
-    return "Hello, Hexlet! Page Analyzer is working."
+    # Отдаем отрендеренный HTML-шаблон
+    return render_template('index.html')

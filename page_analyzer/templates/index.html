@@ -1,0 +1,23 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+<div class="row mt-3">
+    <div class="col-12 col-md-10 col-lg-8 mx-auto bg-white p-5 rounded shadow">
+        <h1 class="display-3 font-weight-bold mb-4">Анализатор страниц</h1>
+        <p class="lead mb-4">Бесплатно проверяйте сайты на SEO-пригодность</p>
+        
+        <!-- Форма отправки URL -->
+        <form action="/urls" method="post" class="d-flex flex-column flex-sm-row justify-content-center">
+            <input 
+                type="text" 
+                name="url" 
+                placeholder="https://example.com" 
+                class="form-control form-control-lg me-sm-2 mb-2 mb-sm-0" 
+                aria-label="url"
+                required
+            >
+            <button type="submit" class="btn btn-lg btn-primary text-uppercase px-4">Проверить</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
