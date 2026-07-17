@@ -1,4 +1,4 @@
-{% extends "layout/base.html" %}
+{% extends "layouts/base.html" %}
 
 {% block content %}
 <div class="row mt-3">
@@ -6,11 +6,11 @@
         <h1 class="display-3 font-weight-bold mb-4">Анализатор страниц</h1>
         <p class="lead mb-4">Бесплатно проверяйте сайты на SEO-пригодность</p>
         
-        <!-- Форма отправки URL -->
-        <form action="/urls" method="post" class="d-flex flex-column flex-sm-row justify-content-center">
+        <form action="{{ url_for('add_url') }}" method="post" class="d-flex flex-column flex-sm-row justify-content-center">
             <input 
                 type="text" 
                 name="url" 
+                value="{{ url if url }}"
                 placeholder="https://example.com" 
                 class="form-control form-control-lg me-sm-2 mb-2 mb-sm-0" 
                 aria-label="url"
