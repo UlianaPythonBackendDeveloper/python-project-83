@@ -1,0 +1,19 @@
+[project]
+name = "hexlet-code"
+version = "0.1.0"
+description = "Page Analyzer - Hexlet Project"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "flask>=3.0.0",
+    "gunicorn>=21.0.0",
+    "python-dotenv>=1.0.0",
+]
+
+[tool.uv]
+managed = true
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.22",
+]
